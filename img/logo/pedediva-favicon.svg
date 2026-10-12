@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="PedeDiva">
+  <title>PedeDiva</title>
+  <rect width="64" height="64" rx="14" fill="#f7f2ec"/>
+  <ellipse cx="13.13" cy="30.56" rx="7.67" ry="8.75" transform="rotate(-8 13.13 30.56)" fill="#cc5f70"/>
+  <ellipse cx="28.57" cy="26.71" rx="5.12" ry="5.83" transform="rotate(2 28.57 26.71)" fill="#241c18"/>
+  <ellipse cx="39.92" cy="28.71" rx="4.50" ry="5.13" transform="rotate(10 39.92 28.71)" fill="#241c18"/>
+  <ellipse cx="49.11" cy="33.19" rx="3.89" ry="4.43" transform="rotate(18 49.11 33.19)" fill="#241c18"/>
+  <ellipse cx="55.53" cy="39.39" rx="3.27" ry="3.73" transform="rotate(28 55.53 39.39)" fill="#241c18"/>
+</svg>

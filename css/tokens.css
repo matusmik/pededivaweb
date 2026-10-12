@@ -1,0 +1,44 @@
+/* PedeDiva — tokeny (zdroj: docs/tokens.json z dizajn systému) */
+:root {
+  /* farby */
+  --paper: #f7f2ec;
+  --paper-raised: #fffcf8;
+  --blush: #f1dfd8;
+  --ink: #241c18;
+  --ink-muted: #675952;
+  --line: #e2d6cc;
+  --line-strong: #8f7d72;
+  --lak: #f2b5bd;
+  --lak-deep: #e89aa5;
+  --on-lak: #5a0f1a;
+  --lak-text: #8b1c2b;
+  --lak-logo: #cc5f70;
+  --moss: #3e5a42;
+  --moss-tint: #e1e8dc;
+  --focus: var(--ink);
+  /* spacing */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-12: 48px;
+  --space-18: 72px;
+  --space-28: 112px;
+  /* radius */
+  --radius-sm: 6px;
+  --radius-md: 14px;
+  --radius-lg: 28px;
+  --radius-pill: 999px;
+  /* shadow */
+  --shadow-bar: 0 -6px 20px rgba(36, 28, 24, 0.10);
+  /* layout */
+  --container: 1120px;
+  --measure: 640px;
+  --header-h: 72px;
+  --tap: 48px;
+  /* písma */
+  --font-serif: "Gloock", Georgia, "Times New Roman", serif;
+  --font-sans: "Figtree", "Segoe UI", system-ui, sans-serif;
+}
