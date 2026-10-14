@@ -584,3 +584,8 @@ a, button, summary { -webkit-tap-highlight-color: transparent; touch-action: man
 
 /* Safari / iOS – lišta prehliadača v farbe webu */
 html { background-color: var(--paper); color-scheme: light; }
+
+/* Kontakt – „Len na objednávku“ ako ružová kapsula vedľa otváracích hodín */
+.pd-contact__row { display: flex; align-items: center; justify-content: space-between; gap: var(--space-3); flex-wrap: wrap; margin-bottom: var(--space-2); }
+.pd-contact__row .pd-contact__label { margin: 0; }
+.pd-pill { display: inline-flex; align-items: center; font-size: 13px; line-height: 16px; font-weight: 600; color: var(--ink-text); background: var(--blush); padding: 6px var(--space-3); border-radius: var(--radius-pill); white-space: nowrap; }
