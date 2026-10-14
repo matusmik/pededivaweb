@@ -161,8 +161,7 @@ ul, ol { padding: 0; list-style: none; }
   .pd-head { margin-bottom: var(--space-8); }
   .pd-header__in { height: 64px; }
   .pd-logo img { height: 28px; }
-  .pd-nav, .pd-header .pd-btn { display: none; }
-  .pd-header__tel { margin-left: auto; }
+  .pd-nav { display: none; }
   .pd-hero { padding: var(--space-8) 0 var(--space-18); }
   .pd-hero__grid, .pd-offer, .pd-contact { grid-template-columns: 1fr; }
   .pd-photo { aspect-ratio: 4 / 3; }
@@ -176,16 +175,12 @@ ul, ol { padding: 0; list-style: none; }
 }
 .pd-footer .pd-ph, .pd-section--ink .pd-ph { background: var(--ink-muted); color: var(--paper); }
 
-.pd-photo--img { padding: 0; }
-.pd-photo--img img { width: 100%; height: 100%; object-fit: cover; object-position: 30% 22%; }
-@media (max-width: 860px) { .pd-photo--img { aspect-ratio: 1 / 1; } .pd-photo--img img { object-position: 30% 45%; } }
 
 /* --- UX úpravy (Laws of UX) --- */
 html { scroll-behavior: smooth; }
 [id] { scroll-margin-top: calc(var(--header-h) + var(--space-4)); }
 .pd-skip { position: absolute; left: var(--space-4); top: -100px; z-index: 30; background: var(--ink); color: var(--paper); padding: var(--space-3) var(--space-4); border-radius: var(--radius-sm); }
 .pd-skip:focus { top: var(--space-3); }
-.pd-header__tel { display: inline-flex; align-items: center; min-height: var(--tap); }
 .pd-cta-note { margin-top: calc(-1 * var(--space-3)); }
 .pd-touch-only { display: none; }
 @media (hover: none) and (pointer: coarse) { .pd-touch-only { display: inline-flex; } }
@@ -226,4 +221,76 @@ html { scroll-behavior: smooth; }
 @media (max-width: 860px) {
   .pd-creds__in { flex-direction: column; align-items: flex-start; gap: var(--space-3); padding-top: var(--space-6); padding-bottom: var(--space-4); }
   .pd-creds__list { flex-direction: column; gap: var(--space-2); }
+}
+
+/* ===== Revízia 14. 10. – layout, foto, animácie ===== */
+/* Hlavička: logo · menu · Kontakt */
+.pd-header { transition: box-shadow .25s ease; }
+.pd-header.is-scrolled { box-shadow: 0 6px 20px rgba(36, 28, 24, .06); }
+.pd-header__cta { margin-left: var(--space-2); }
+@media (max-width: 860px) {
+  .pd-header__cta { margin-left: auto; min-height: 40px; padding: 0 var(--space-4); font-size: 15px; }
+}
+
+/* Fotka: vždy celá, bez orezania, pomer podľa obrázka */
+.pd-photo--img { aspect-ratio: auto; padding: 0; margin: 0; display: block; background: var(--blush); }
+.pd-photo--img img { width: 100%; height: auto; display: block; }
+
+/* Hero – tablet a mobil: jeden stĺpec, fotka primeranej veľkosti */
+@media (max-width: 960px) {
+  .pd-hero__grid { grid-template-columns: 1fr; gap: var(--space-8); }
+  .pd-hero__text { max-width: 640px; }
+  .pd-photo--img { width: 100%; max-width: 520px; }
+}
+@media (min-width: 861px) and (max-width: 960px) {
+  .pd-hero__grid { grid-template-columns: 1fr; }
+}
+
+/* Dôkazy v hero ako zoznam */
+.pd-proof { list-style: none; margin: 0; }
+.pd-proof li { display: inline; }
+
+/* Príležitosti */
+.pd-occasions { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: var(--space-6); }
+.pd-occasion { background: var(--paper-raised); border-radius: var(--radius-md); padding: var(--space-6); display: grid; gap: var(--space-3); align-content: start; border: 1px solid var(--line); transition: transform .25s ease, border-color .25s ease; }
+.pd-occasion:hover { transform: translateY(-3px); border-color: var(--line-strong); }
+.pd-occasion__when { font: 600 12px/16px var(--font-sans); letter-spacing: .08em; text-transform: uppercase; color: var(--lak-text); }
+.pd-occasion h3 { font-family: var(--font-serif); font-weight: 400; font-size: 24px; line-height: 29px; }
+.pd-occasion p:last-child { font-size: 15px; line-height: 23px; color: var(--ink-muted); }
+@media (max-width: 1080px) { .pd-occasions { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 560px) { .pd-occasions { grid-template-columns: 1fr; } }
+
+/* O mne */
+.pd-about { display: grid; grid-template-columns: .9fr 1.1fr; gap: var(--space-12); align-items: start; }
+.pd-about__text { margin: 0; gap: var(--space-4); }
+.pd-about__text .pd-lead { margin-top: var(--space-2); }
+.pd-about__sign { font-family: var(--font-serif); font-size: 26px; line-height: 32px; color: var(--lak-text); margin-top: var(--space-2); }
+.pd-about .pd-certs { grid-template-columns: 1fr; }
+@media (max-width: 960px) { .pd-about { grid-template-columns: 1fr; gap: var(--space-8); } }
+
+/* Cenník a karty na tablete */
+@media (min-width: 861px) and (max-width: 1080px) { .pd-contact { grid-template-columns: 1fr; } }
+
+/* Päta */
+.pd-footer .pd-wrap { align-items: center; }
+.pd-footer img { width: 144px; height: auto; }
+
+/* ===== Animácie (jemné, vypnú sa pri „obmedziť pohyb“) ===== */
+.pd-btn { transition: background-color .15s ease, border-color .15s ease, transform .15s ease, box-shadow .15s ease; }
+.pd-btn--primary:hover { transform: translateY(-1px); box-shadow: 0 6px 16px rgba(204, 95, 112, .25); }
+.pd-btn--primary:active { transform: translateY(0); box-shadow: none; }
+
+@keyframes pd-fade-up { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
+@keyframes pd-fade-in { from { opacity: 0; transform: scale(.98); } to { opacity: 1; transform: none; } }
+.js .pd-in { opacity: 0; animation: pd-fade-up .7s cubic-bezier(.2, .7, .2, 1) forwards; animation-delay: calc(var(--d, 0) * 90ms + 80ms); }
+.js .pd-in--photo { animation-name: pd-fade-in; animation-duration: .9s; }
+
+.js [data-reveal] { opacity: 0; transform: translateY(18px); transition: opacity .7s cubic-bezier(.2, .7, .2, 1), transform .7s cubic-bezier(.2, .7, .2, 1); transition-delay: calc(var(--d, 0) * 90ms); }
+.js [data-reveal].is-in { opacity: 1; transform: none; }
+
+.pd-faq details p { animation: pd-fade-up .3s ease; }
+
+@media (prefers-reduced-motion: reduce) {
+  .js .pd-in, .js [data-reveal] { opacity: 1 !important; transform: none !important; animation: none !important; transition: none !important; }
+  .pd-occasion:hover, .pd-btn--primary:hover { transform: none; }
 }
