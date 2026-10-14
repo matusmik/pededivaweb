@@ -589,3 +589,16 @@ html { background-color: var(--paper); color-scheme: light; }
 .pd-contact__row { display: flex; align-items: center; justify-content: space-between; gap: var(--space-3); flex-wrap: wrap; margin-bottom: var(--space-2); }
 .pd-contact__row .pd-contact__label { margin: 0; }
 .pd-pill { display: inline-flex; align-items: center; font-size: 13px; line-height: 16px; font-weight: 600; color: var(--ink-text); background: var(--blush); padding: 6px var(--space-3); border-radius: var(--radius-pill); white-space: nowrap; }
+/* Hero – tlačidlá vždy vedľa seba (aj mobil a tablet) */
+@media (max-width: 860px) {
+  .pd-hero .pd-actions { flex-wrap: nowrap; gap: var(--space-3); }
+  .pd-hero .pd-actions .pd-btn--primary { width: auto; }
+  .pd-hero .pd-actions .pd-btn { flex: 0 1 auto; }
+}
+@media (max-width: 480px) {
+  .pd-hero .pd-actions .pd-btn { min-height: 52px; padding: 0 var(--space-4); font-size: 16px; flex: 1 1 auto; }
+}
+@media (max-width: 360px) {
+  .pd-hero .pd-actions { gap: var(--space-2); }
+  .pd-hero .pd-actions .pd-btn { padding: 0 var(--space-3); font-size: 15px; }
+}
