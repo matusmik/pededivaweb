@@ -581,3 +581,6 @@ a, button, summary { -webkit-tap-highlight-color: transparent; touch-action: man
   .pd-cred { grid-template-columns: minmax(0, 1fr); }
   .pd-cred__ic { width: 26px; height: 32px; margin-bottom: var(--space-2); }
 }
+
+/* Safari / iOS – lišta prehliadača v farbe webu */
+html { background-color: var(--paper); color-scheme: light; }
