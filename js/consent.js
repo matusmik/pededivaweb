@@ -73,12 +73,12 @@
   function build() {
     banner = el(
       '<section class="pd-cookie" role="region" aria-label="Súhlas s cookies" hidden>' +
-        '<p class="pd-cookie__title">Malá otázka, kým začnete</p>' +
-        '<p class="pd-cookie__text">Web používa nevyhnutné cookies, aby fungoval. Ak dovolíte, zapnem aj analytické nástroje Google Analytics a Microsoft Clarity – vďaka nim vidím, či sa vám na stránke dobre hľadá. Nič z toho nepoužívam na reklamu. <a href="ochrana-osobnych-udajov.html#cookies">Viac o cookies</a></p>' +
+        '<p class="pd-cookie__title">Nastavenia cookies</p>' +
+        '<p class="pd-cookie__text">Nevyhnutné cookies potrebuje web, aby fungoval. S vaším súhlasom zapnem aj analytické, vďaka ktorým vidím štatistiky návštevnosti. Neukladajú vaše meno ani telefón. <a href="/ochrana-osobnych-udajov.html">Viac info</a></p>' +
         '<div class="pd-cookie__actions">' +
           '<button type="button" class="pd-btn pd-btn--primary" data-c="all">Povoliť všetky</button>' +
           '<button type="button" class="pd-btn pd-btn--secondary" data-c="none">Odmietnuť všetky</button>' +
-          '<button type="button" class="pd-btn pd-btn--text" data-c="edit">Upraviť nastavenia</button>' +
+          '<button type="button" class="pd-btn pd-btn--text" data-c="edit">Upraviť predvoľby</button>' +
         '</div>' +
       '</section>');
 
@@ -86,28 +86,18 @@
       '<dialog class="pd-consent" aria-labelledby="pd-consent-h">' +
         '<form method="dialog" class="pd-consent__in">' +
           '<h2 id="pd-consent-h" class="pd-h3">Nastavenia cookies</h2>' +
-          '<p class="pd-consent__lead">Vyberte si, čo môže web ukladať. Svoju voľbu môžete kedykoľvek zmeniť v pätičke stránky cez „Nastavenia cookies“.</p>' +
+          '<p class="pd-consent__lead">Svoj výber môžete kedykoľvek zmeniť cez „Nastavenia cookies“ v\u00a0pätičke webu.</p>' +
           '<div class="pd-consent__cat">' +
-            '<div class="pd-consent__row"><h3>Nevyhnutné</h3><span class="pd-consent__always">Vždy zapnuté</span></div>' +
-            '<p>Potrebné na to, aby web fungoval a zapamätal si vašu voľbu o cookies. Nedajú sa vypnúť.</p>' +
-            '<details><summary>Čo presne ukladáme</summary><table><tr><th>Názov</th><th>Účel</th><th>Doba</th></tr>' +
-              '<tr><td>pd_consent</td><td>Vaša voľba o cookies (lokálne úložisko prehliadača)</td><td>6 mesiacov</td></tr></table></details>' +
+            '<div class="pd-consent__row"><h3>Nevyhnutné</h3><span class="pd-consent__always">Vždy povolené</span></div>' +
+            '<p>Potrebné na to, aby web fungoval. Zapamätajú si aj vašu voľbu v tomto okne, aby sa vás web nepýtal pri každej návšteve.</p>' +
           '</div>' +
           '<div class="pd-consent__cat">' +
             '<div class="pd-consent__row"><h3>Analytické</h3>' +
               '<label class="pd-switch"><input type="checkbox" id="pd-consent-analytics"><span class="pd-switch__ui" aria-hidden="true"></span><span class="pd-sr">Povoliť analytické cookies</span></label></div>' +
-            '<p>Pomáhajú mi pochopiť, ako sa web používa – ktoré časti čítate, odkiaľ prichádzate a kde sa stránka zle ovláda. Údaje sú súhrnné a nepoužívam ich na reklamu.</p>' +
-            '<details><summary>Čo presne ukladáme</summary><table><tr><th>Názov</th><th>Nástroj</th><th>Doba</th></tr>' +
-              '<tr><td>_ga</td><td>Google Analytics – rozlíšenie návštevníkov</td><td>2 roky</td></tr>' +
-              '<tr><td>_ga_*</td><td>Google Analytics – udržanie relácie</td><td>2 roky</td></tr>' +
-              '<tr><td>_clck</td><td>Microsoft Clarity – ID návštevníka a nastavenia</td><td>1 rok</td></tr>' +
-              '<tr><td>_clsk</td><td>Microsoft Clarity – spojenie zobrazení do jednej návštevy</td><td>1 deň</td></tr>' +
-              '<tr><td>CLID, MUID, MR, SM, ANONCHK</td><td>Microsoft Clarity – cookies tretej strany (doména clarity.ms / bing.com)</td><td>do 1 roka</td></tr>' +
-            '</table></details>' +
+            '<p>Spustia Google Analytics a\u00a0Microsoft Clarity, vďaka ktorým vidím štatistiky návštevnosti. Neukladajú vaše meno ani e-mail.</p>' +
           '</div>' +
           '<div class="pd-consent__actions">' +
-            '<button type="submit" class="pd-btn pd-btn--secondary" value="save">Uložiť výber</button>' +
-            '<button type="submit" class="pd-btn pd-btn--primary" value="all">Povoliť všetky</button>' +
+            '<button type="submit" class="pd-btn pd-btn--primary" value="save">Uložiť výber</button>' +
           '</div>' +
           '<button type="submit" class="pd-consent__close" value="close" aria-label="Zavrieť">×</button>' +
         '</form>' +

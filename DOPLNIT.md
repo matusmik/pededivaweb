@@ -5,7 +5,7 @@
 - [x] Telefón
 - [x] E-mail (voliteľné)
 - [ ] Otváracie hodiny po dňoch (zatiaľ Po–Pi 8–17, overiť dni)
-- [ ] Obchodné meno a IČO (do ochrany osobných údajov)
+- [x] Obchodné meno a IČO (do ochrany osobných údajov)
 - [x] Parkovanie – kde a či je zadarmo
 - [ ] Odkaz na Google Mapy (zdieľať → kopírovať odkaz)
 
@@ -43,7 +43,7 @@
 ## Analytika a právne veci
 - [x] Google Analytics 4 – G-3EKP7FF8SV (v js/consent.js)
 - [x] Microsoft Clarity – yxmdclzer4 (v js/consent.js)
-- [ ] IČO do ochrana-osobnych-udajov.html
+- [x] IČO do ochrana-osobnych-udajov.html
 - [ ] Hosting (Vercel/iný) do ochrana-osobnych-udajov.html
 - [ ] Nechať skontrolovať text ochrany osobných údajov (napr. účtovník/právnik)
 

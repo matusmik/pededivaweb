@@ -211,7 +211,8 @@
     <div class="pd-footer__grid">
       <div class="pd-footer__brand">
         <img src="/img/logo/pedediva-inverse-logo.svg" alt="PedeDiva" width="144" height="25">
-        <p>Pedikúra v Banskej Bystrici<br>Lenka Mikušová, zdravotná sestra</p>
+        <p>Pedikúra v Banskej Bystrici</p>
+        <p class="pd-footer__company">Lenka Mikušová – PEDE DIVA<br>Sídlo: Slnečná 3818/50, 974 11 Banská Bystrica<br>IČO: 50460498 · DIČ: 1083327993</p>
       </div>
       <div class="pd-footer__col">
         <h2 class="pd-footer__h">Kontakt</h2>
@@ -244,7 +245,6 @@
       <ul class="pd-footer__legal" aria-label="Právne informácie">
         <li><a href="/ochrana-osobnych-udajov.html">Ochrana osobných údajov</a></li>
         <li><a href="#" data-cookie-settings>Nastavenia cookies</a></li>
-        <li><a href="/404.html" rel="nofollow">Chybová stránka</a></li>
       </ul>
     </div>
   </div>
@@ -271,8 +271,20 @@
 
   /* Hlavička dostane jemný tieň po odscrollovaní */
   var header = document.querySelector('.pd-header');
-  var onScroll = function () { header.classList.toggle('is-scrolled', window.scrollY > 8); };
-  window.addEventListener('scroll', onScroll, { passive: true }); onScroll();
+  /* Na mobile sa hlavička pri posúvaní nadol schová a pri posúvaní nahor sa vráti */
+  var mobile = window.matchMedia('(max-width: 860px)'), lastY = window.scrollY, ticking = false;
+  var update = function () {
+    var y = Math.max(0, window.scrollY), dy = y - lastY;
+    header.classList.toggle('is-scrolled', y > 8);
+    if (!mobile.matches || y < 80 || header.contains(document.activeElement)) header.classList.remove('is-hidden');
+    else if (dy > 6) header.classList.add('is-hidden');
+    else if (dy < -6) header.classList.remove('is-hidden');
+    if (Math.abs(dy) > 6 || y < 80) lastY = y;
+    ticking = false;
+  };
+  window.addEventListener('scroll', function () { if (!ticking) { ticking = true; requestAnimationFrame(update); } }, { passive: true });
+  header.addEventListener('focusin', function () { header.classList.remove('is-hidden'); });
+  update();
 
   /* Mobilná lišta sa ukáže až keď hlavné tlačidlo v hero zmizne z obrazovky */
   var bar = document.querySelector('.pd-bar'), cta = document.querySelector('.pd-hero .pd-btn--primary');
