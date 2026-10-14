@@ -57,7 +57,7 @@
       <p class="pd-lead pd-in" style="--d:2">Ošetrím zarastené nechty, otlaky aj popraskané päty. A keď nič netrápi, pripravím vaše nohy do sandálov, na ples alebo len tak pre radosť. Šetrne, sterilne a bez čakania v čakárni.</p>
       <div class="pd-actions pd-in" style="--d:3">
         <a class="pd-btn pd-btn--primary pd-btn--lg" href="#kontakt">Objednať sa</a>
-        <a class="pd-btn pd-btn--text" href="#cennik">Pozrieť cenník</a>
+        <a class="pd-btn pd-btn--jump" href="#cennik">Pozrieť cenník<span class="pd-jump__arrow" aria-hidden="true">↓</span></a>
       </div>
       <p class="pd-small pd-cta-note pd-in" style="--d:3">Termíny mávam obsadené zhruba mesiac dopredu – ozvite sa včas. Po – Pi 8.00 – 17.00, víkend po dohode. Parkovanie zadarmo pri budove.</p>
       <ul class="pd-proof pd-in" style="--d:4">
@@ -136,23 +136,16 @@
     <p class="pd-eyebrow">Darčekový poukaz</p>
     <h2 class="pd-h2">Darujte ľahké nohy</h2>
     <p class="pd-lead">Pre mamu, babku, partnera aj kolegyňu. Poukaz pripravím na konkrétne ošetrenie alebo na sumu, ktorú si vyberiete.</p>
+  </div>
+  <div class="pd-gift__card" data-reveal style="--d:1">
+    <p class="pd-gift__card-h">Ako to funguje</p>
     <ul class="pd-gift__list">
       <li>Na pedikúru, pedikúru s gél lakom alebo na ľubovoľnú sumu</li>
       <li>Zavolajte alebo napíšte SMS – poukaz si vyzdvihnete v salóne</li>
       <li>Platiť môžete kartou, QR kódom alebo v hotovosti</li>
       <li>Obdarovaný si termín dohodne sám, keď mu to vyhovuje</li>
     </ul>
-    <div class="pd-actions"><a class="pd-btn pd-btn--primary pd-btn--lg" href="#kontakt">Objednať poukaz</a></div>
-  </div>
-  <div class="pd-voucher" data-reveal style="--d:1" aria-hidden="true">
-    <div class="pd-voucher__in">
-      <img src="img/logo/pedediva-logo.svg" alt="" width="186" height="32">
-      <p class="pd-voucher__label">Darčekový poukaz</p>
-      <p class="pd-voucher__what">na pedikúru</p>
-      <div class="pd-voucher__line"><span>Pre</span><i></i></div>
-      <div class="pd-voucher__line"><span>Od</span><i></i></div>
-      <p class="pd-voucher__foot">Janka Kráľa 3, Banská Bystrica · 0903 270 662</p>
-    </div>
+    <a class="pd-btn pd-btn--primary pd-btn--lg pd-btn--block" href="#kontakt">Objednať poukaz</a>
   </div>
 </div></section>
 <section class="pd-section" id="o-mne"><div class="pd-wrap pd-about">
@@ -213,7 +206,49 @@
 </div></section>
 </main>
 
-<footer class="pd-footer"><div class="pd-wrap pd-footer__in"><img src="img/logo/pedediva-inverse-logo.svg" alt="PedeDiva" width="144" height="25"><p>Pedikúra · Janka Kráľa 3, Banská Bystrica · © 2026</p><nav class="pd-footer__links" aria-label="Právne informácie"><a href="ochrana-osobnych-udajov.html">Ochrana osobných údajov</a><a href="#" data-cookie-settings>Nastavenia cookies</a><a href="404.html" rel="nofollow">Chybová stránka</a></nav></div></footer>
+<footer class="pd-footer">
+  <div class="pd-wrap">
+    <div class="pd-footer__grid">
+      <div class="pd-footer__brand">
+        <img src="/img/logo/pedediva-inverse-logo.svg" alt="PedeDiva" width="144" height="25">
+        <p>Pedikúra v Banskej Bystrici<br>Lenka Mikušová, zdravotná sestra</p>
+      </div>
+      <div class="pd-footer__col">
+        <h2 class="pd-footer__h">Kontakt</h2>
+        <ul>
+          <li><a href="tel:+421903270662">0903 270 662</a></li>
+          <li><a href="mailto:lenocka.mikusova@gmail.com">lenocka.mikusova@gmail.com</a></li>
+          <li><a href="https://www.google.com/maps/search/?api=1&amp;query=Janka+Kr%C3%A1%C4%BEa+3%2C+974+01+Bansk%C3%A1+Bystrica" target="_blank" rel="noopener">Janka Kráľa 3, 974 01 Banská Bystrica</a></li>
+        </ul>
+      </div>
+      <div class="pd-footer__col">
+        <h2 class="pd-footer__h">Otváracie hodiny</h2>
+        <ul>
+          <li>Pondelok – piatok 8.00 – 17.00</li>
+          <li>Víkend a sviatky po dohode</li>
+          <li>Len na objednávku</li>
+        </ul>
+      </div>
+      <nav class="pd-footer__col" aria-label="Rýchle odkazy">
+        <h2 class="pd-footer__h">Na stránke</h2>
+        <ul>
+          <li><a href="/#cennik">Cenník</a></li>
+          <li><a href="/#poukaz">Darčekový poukaz</a></li>
+          <li><a href="/#o-mne">O mne</a></li>
+          <li><a href="/#otazky">Časté otázky</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="pd-footer__bottom">
+      <p class="pd-footer__copy">© 2026 PedeDiva – Lenka Mikušová. Všetky práva vyhradené.</p>
+      <ul class="pd-footer__legal" aria-label="Právne informácie">
+        <li><a href="/ochrana-osobnych-udajov.html">Ochrana osobných údajov</a></li>
+        <li><a href="#" data-cookie-settings>Nastavenia cookies</a></li>
+        <li><a href="/404.html" rel="nofollow">Chybová stránka</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
 
 <div class="pd-bar" role="region" aria-label="Rýchly kontakt">
   <a class="pd-bar__call" href="tel:+421903270662" aria-label="Zavolať 0903 270 662">

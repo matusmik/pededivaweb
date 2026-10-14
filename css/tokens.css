@@ -1,3 +1,7 @@
+/* Písma – uložené priamo na webe (žiadne volanie na Google Fonts) */
+@font-face { font-family: "Figtree"; src: url("../fonts/figtree.woff2") format("woff2"); font-weight: 300 900; font-style: normal; font-display: swap; }
+@font-face { font-family: "Newsreader"; src: url("../fonts/newsreader-600.woff2") format("woff2"); font-weight: 400 700; font-style: normal; font-display: swap; }
+
 /* PedeDiva — tokeny (zdroj: docs/tokens.json z dizajn systému) */
 :root {
   /* farby */
@@ -39,6 +43,6 @@
   --header-h: 72px;
   --tap: 48px;
   /* písma */
-  --font-serif: "Gloock", Georgia, "Times New Roman", serif;
+  --font-serif: "Newsreader", Georgia, "Times New Roman", serif;
   --font-sans: "Figtree", "Segoe UI", system-ui, sans-serif;
 }
