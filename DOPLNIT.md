@@ -5,7 +5,7 @@
 - [x] Telefón
 - [x] E-mail (voliteľné)
 - [ ] Otváracie hodiny po dňoch (zatiaľ Po–Pi 8–17, overiť dni)
-- [ ] Obchodné meno a IČO (do päty)
+- [ ] Obchodné meno a IČO (do ochrany osobných údajov)
 - [x] Parkovanie – kde a či je zadarmo
 - [ ] Odkaz na Google Mapy (zdieľať → kopírovať odkaz)
 
@@ -39,3 +39,18 @@
 ## Doména a hosting
 - [ ] Názov domény (napr. pedediva.sk) – overiť dostupnosť
 - [ ] Kde bude web bežať (napr. Netlify, Vercel, GitHub Pages – pre statický web zadarmo)
+
+## Analytika a právne veci
+- [x] Google Analytics 4 – G-3EKP7FF8SV (v js/consent.js)
+- [x] Microsoft Clarity – yxmdclzer4 (v js/consent.js)
+- [ ] IČO do ochrana-osobnych-udajov.html
+- [ ] Hosting (Vercel/iný) do ochrana-osobnych-udajov.html
+- [ ] Nechať skontrolovať text ochrany osobných údajov (napr. účtovník/právnik)
+
+## Darčekový poukaz
+- [ ] Platnosť poukazu (napr. 6 alebo 12 mesiacov)
+- [ ] Ako vyzerá fyzický poukaz (môžem navrhnúť na tlač)
+
+## Doména (teraz pedediva.sk – pri vlastnej doméne nahradiť)
+- [ ] index.html – canonical a og:… (5 miest, Ctrl+H „https://pedediva.sk“)
+- [ ] robots.txt a sitemap.xml
