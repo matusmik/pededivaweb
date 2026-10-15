@@ -54,3 +54,7 @@
 ## Doména (teraz pedediva.sk – pri vlastnej doméne nahradiť)
 - [ ] index.html – canonical a og:… (5 miest, Ctrl+H „https://pedediva.sk“)
 - [ ] robots.txt a sitemap.xml
+
+## Nový cenník (pripravený, zatiaľ nepoužitý)
+- Na webe je pôvodný cenník platný od 1. 1. 2025.
+- Nový cenník (pedikúra 33 €, švajčiarska 36 €, zľava 10 % pre seniorov 65+, ZŤP a diabetikov, odstránenie gél laku 5 €) je uložený mimo webu – zvažuje sa od 1. 1. 2027.
