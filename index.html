@@ -193,17 +193,8 @@
 
 <section id="kontakt" class="pd-section pd-section--ink"><div class="pd-wrap pd-contact">
   <div class="pd-head" style="margin:0" data-reveal><p class="pd-eyebrow">Kontakt</p><h2 class="pd-h2">Teším sa na vás v Banskej Bystrici</h2><p class="pd-lead">Do konca roka mám plno. Nových klientov zapisujem do poradovníka – najskôr to vidím na január 2027, ale istý termín zatiaľ sľúbiť neviem. Napíšte mi SMS a ozvem sa, keď sa uvoľní miesto.</p>
-    <form class="pd-sms" data-sms novalidate>
+    <form class="pd-sms pd-mobile-only" data-sms novalidate>
       <p class="pd-sms__note">Počas ošetrenia telefón nedvíham, preto prosím <strong>len SMS</strong>.</p>
-      <div class="pd-progress" data-progress>
-        <p class="pd-progress__top"><span>Zápis do poradovníka</span><span data-progress-count aria-live="polite">1 zo 4 krokov hotový</span></p>
-        <ol class="pd-progress__steps">
-          <li class="is-done" data-step="pick">Vybrali ste si PedeDiva</li>
-          <li data-step="name">Vaše meno</li>
-          <li data-step="choice">Ako sa ozvať</li>
-          <li data-step="send">Odoslať SMS</li>
-        </ol>
-      </div>
       <label class="pd-sms__field"><span>Vaše meno</span><input type="text" name="meno" autocomplete="name" placeholder="napr. Mária Nováková"></label>
       <fieldset class="pd-sms__choice"><legend>Ak sa uvoľní termín, ako sa vám mám ozvať?</legend>
         <label><input type="radio" name="kontakt" value="call"><span>Pokojne mi zavolajte</span></label>
@@ -211,10 +202,18 @@
         <label><input type="radio" name="kontakt" value="jan"><span>Počkám, kým sa ozvete</span></label>
       </fieldset>
       <p class="pd-sms__preview" aria-live="polite" data-sms-preview>Dobrý deň, mám záujem o pedikúru. Prosím, zapíšte si ma do poradovníka. Keď sa uvoľní termín, pokojne mi zavolajte. Meno: </p>
-      <div class="pd-actions"><a class="pd-btn pd-btn--primary pd-btn--lg" data-sms-link href="sms:+421903270662?&amp;body=Dobr%C3%BD%20de%C5%88%2C%20m%C3%A1m%20z%C3%A1ujem%20o%20pedik%C3%BAru.%20Pros%C3%ADm%2C%20zap%C3%AD%C5%A1te%20si%20ma%20do%20poradovn%C3%ADka.%20Ke%C4%8F%20sa%20uvo%C4%BEn%C3%AD%20term%C3%ADn%2C%20pokojne%20mi%20zavolajte.%20Meno%3A%20">Napísať SMS</a><button type="button" class="pd-btn pd-btn--secondary pd-btn--lg pd-on-ink pd-desktop-only" data-sms-copy>Skopírovať text</button></div>
+      <div class="pd-actions"><a class="pd-btn pd-btn--primary pd-btn--lg" data-sms-link href="sms:+421903270662?&amp;body=Dobr%C3%BD%20de%C5%88%2C%20m%C3%A1m%20z%C3%A1ujem%20o%20pedik%C3%BAru.%20Pros%C3%ADm%2C%20zap%C3%AD%C5%A1te%20si%20ma%20do%20poradovn%C3%ADka.%20Ke%C4%8F%20sa%20uvo%C4%BEn%C3%AD%20term%C3%ADn%2C%20pokojne%20mi%20zavolajte.%20Meno%3A%20">Napísať SMS</a></div>
       <p class="pd-sms__done" data-sms-done hidden>Ďakujem! Keď SMS odošlete, zapíšem si vás a ozvem sa, keď sa uvoľní miesto.</p>
-      <p class="pd-sms__desk pd-desktop-only">Na počítači: skopírujte text a pošlite ho SMS-kou na <strong>0903 270 662</strong>.</p>
-    </form></div>
+    </form>
+    <div class="pd-smsdesk pd-desktop-only">
+      <p class="pd-smsdesk__num">SMS na <strong>0903 270 662</strong></p>
+      <p>Počas ošetrenia telefón nedvíham, preto prosím len SMS. Stačí napísať:</p>
+      <ul>
+        <li>vaše meno,</li>
+        <li>že máte záujem o pedikúru (zápis do poradovníka),</li>
+        <li>či vám môžem zavolať, keď sa uvoľní termín.</li>
+      </ul>
+    </div></div>
   <div class="pd-contact__card" data-reveal style="--d:1">
     <div><p class="pd-contact__label">Adresa</p><p class="pd-contact__big">Janka Kráľa 3, 974 01 Banská Bystrica</p><p class="pd-small">Parkovanie zadarmo priamo pri budove.</p><a class="pd-btn pd-btn--text" href="https://www.google.com/maps/search/?api=1&amp;query=PEDE+DIVA+pedik%C3%BAra%2C+Janka+Kr%C3%A1%C4%BEa+3%2C+Bansk%C3%A1+Bystrica&amp;query_place_id=ChIJW1UWasQ9FUcRttKpU3KRBxk" target="_blank" rel="noopener">Navigovať v Mapách Google</a></div>
     <div><p class="pd-contact__label">SMS</p><p class="pd-contact__big"><a href="sms:+421903270662?&amp;body=Dobr%C3%BD%20de%C5%88%2C%20m%C3%A1m%20z%C3%A1ujem%20o%20pedik%C3%BAru.%20Pros%C3%ADm%2C%20zap%C3%AD%C5%A1te%20si%20ma%20do%20poradovn%C3%ADka.%20Ke%C4%8F%20sa%20uvo%C4%BEn%C3%AD%20term%C3%ADn%2C%20pokojne%20mi%20zavolajte.%20Meno%3A%20">0903 270 662</a></p><p class="pd-small">Počas ošetrenia nedvíham, píšte prosím SMS.</p></div>

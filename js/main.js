@@ -46,34 +46,17 @@
   });
 })();
 
-/* SMS do poradovníka – text podľa voľby návštevníka + ukazovateľ krokov */
+/* SMS do poradovníka (mobil) – text podľa voľby návštevníka */
 (function () {
   var f = document.querySelector('[data-sms]'); if (!f) return;
-  var num = '+421903270662', link = f.querySelector('[data-sms-link]'), prev = f.querySelector('[data-sms-preview]'),
-      copy = f.querySelector('[data-sms-copy]'), count = f.querySelector('[data-progress-count]'), done = f.querySelector('[data-sms-done]');
+  var num = '+421903270662', link = f.querySelector('[data-sms-link]'), prev = f.querySelector('[data-sms-preview]'), done = f.querySelector('[data-sms-done]');
   var opt = { call: 'Keď sa uvoľní termín, pokojne mi zavolajte.', sms: 'Keď sa uvoľní termín, napíšte mi prosím SMS.', jan: 'Pokojne počkám, kým sa vám uvoľní miesto.' };
-  var sent = false;
-  function choice() { var c = f.querySelector('input[name=kontakt]:checked'); return c ? c.value : ''; }
   function text() {
-    var m = (f.meno.value || '').trim().slice(0, 60);
-    return 'Dobrý deň, mám záujem o pedikúru. Prosím, zapíšte si ma do poradovníka. ' + opt[choice() || 'call'] + ' Meno: ' + m;
+    var c = f.querySelector('input[name=kontakt]:checked'), m = (f.meno.value || '').trim().slice(0, 60);
+    return 'Dobrý deň, mám záujem o pedikúru. Prosím, zapíšte si ma do poradovníka. ' + opt[c ? c.value : 'call'] + ' Meno: ' + m;
   }
-  function step(name, on) { var li = f.querySelector('[data-step="' + name + '"]'); if (li) li.classList.toggle('is-done', !!on); }
-  function upd() {
-    var t = text(); prev.textContent = t; link.href = 'sms:' + num + '?&body=' + encodeURIComponent(t);
-    var hasName = (f.meno.value || '').trim().length > 1, hasChoice = !!choice();
-    step('name', hasName); step('choice', hasChoice); step('send', sent);
-    var n = 1 + hasName + hasChoice + sent;
-    f.classList.toggle('is-ready', hasName && hasChoice && !sent);
-    count.textContent = n === 4 ? 'Hotovo ✓' : n === 3 ? 'Zostáva posledný krok' : n + ' zo 4 krokov hotové';
-    if (n === 1) count.textContent = '1 zo 4 krokov hotový';
-  }
-  function finish() { sent = true; if (done) done.hidden = false; upd(); }
+  function upd() { var t = text(); prev.textContent = t; link.href = 'sms:' + num + '?&body=' + encodeURIComponent(t); }
   f.addEventListener('input', upd); f.addEventListener('change', upd); f.addEventListener('submit', function (e) { e.preventDefault(); });
-  link.addEventListener('click', finish);
-  if (copy) copy.addEventListener('click', function () {
-    var t = text(), ok = function () { copy.textContent = 'Skopírované ✓'; finish(); setTimeout(function () { copy.textContent = 'Skopírovať text'; }, 2000); };
-    if (navigator.clipboard) navigator.clipboard.writeText(t).then(ok, function () {});
-  });
+  link.addEventListener('click', function () { if (done) done.hidden = false; });
   upd();
 })();

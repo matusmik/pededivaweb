@@ -660,3 +660,12 @@ html { background-color: var(--paper); color-scheme: light; }
 @media (prefers-reduced-motion: reduce) { .pd-progress__steps li::before { transition: none; } }
 .pd-loyal { border-radius: var(--radius-md); text-align: left; }
 @media (max-width: 600px) { .pd-loyal { font-size: 15px; } .pd-progress__top { flex-wrap: wrap; } }
+
+/* Kontakt: SMS formulár len na mobile/tablete, na počítači stručný návod */
+@media (hover: hover) and (pointer: fine) { .pd-mobile-only { display: none !important; } }
+.pd-smsdesk { margin-top: var(--space-6); max-width: 520px; padding: var(--space-6); border-radius: var(--radius-md); border: 1.5px solid rgba(247,242,236,.25); color: var(--line); }
+.pd-smsdesk p { margin: 0 0 var(--space-2); font-size: 16px; line-height: 25px; }
+.pd-smsdesk__num { font-size: 20px !important; line-height: 28px !important; color: var(--paper); margin-bottom: var(--space-3) !important; }
+.pd-smsdesk__num strong { font-family: var(--font-serif); font-weight: 600; font-size: 26px; color: var(--lak); }
+.pd-smsdesk ul { margin: 0; padding-left: var(--space-6); list-style: disc; display: grid; gap: var(--space-1); font-size: 16px; line-height: 25px; color: var(--paper); }
+.pd-smsdesk li::marker { color: var(--lak); }
