@@ -58,3 +58,7 @@
 ## Nový cenník (pripravený, zatiaľ nepoužitý)
 - Na webe je pôvodný cenník platný od 1. 1. 2025.
 - Nový cenník (pedikúra 33 €, švajčiarska 36 €, zľava 10 % pre seniorov 65+, ZŤP a diabetikov, odstránenie gél laku 5 €) je uložený mimo webu – zvažuje sa od 1. 1. 2027.
+
+## Poradovník (plno do konca roka 2026)
+- Texty „Do konca roka mám plno… od januára 2027“ sú v index.html: úvod (pd-notice), kontakt, mobilná lišta, „Ako to prebieha“ a otázka „Ako rýchlo sa dostanem na termín?“.
+- V januári 2027 ich treba upraviť (január 2027 je uvedený len ako „najskôr“, nie isto).
