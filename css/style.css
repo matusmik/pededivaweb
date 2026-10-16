@@ -637,3 +637,26 @@ html { background-color: var(--paper); color-scheme: light; }
 /* Kontakt – číslo na SMS bez podčiarknutia, vo farbe */
 .pd-contact__big a[href^="sms:"] { color: var(--lak-text); text-decoration: none; }
 .pd-contact__big a[href^="sms:"]:hover { color: var(--lak-logo); }
+
+/* Kartičky príležitostí nie sú klikateľné – bez hover efektu */
+.pd-occasion, .pd-occasion:hover, .pd-occasion:active { transform: none; border-color: var(--line); transition: none; cursor: default; }
+
+/* Cenník – stálym klientom ceny nezvyšujem */
+.pd-loyal { display: inline-flex; align-items: center; gap: var(--space-2); margin: var(--space-4) 0 0; padding: var(--space-2) var(--space-4); border-radius: var(--radius-pill); background: var(--blush); color: var(--lak-text); font-weight: 700; font-size: 16px; line-height: 22px; }
+.pd-loyal span { color: var(--lak-logo); font-size: 15px; }
+
+/* Poradovník – ukazovateľ krokov (efekt nedokončenej úlohy) */
+.pd-progress { display: grid; gap: var(--space-3); }
+.pd-progress__top { margin: 0; display: flex; justify-content: space-between; gap: var(--space-3); font-size: 14px; line-height: 20px; color: var(--line); }
+.pd-progress__top span:first-child { font-weight: 600; color: var(--paper); }
+.pd-progress__top span:last-child { color: var(--lak); font-weight: 600; }
+.pd-progress__steps { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 6px; }
+.pd-progress__steps li { font-size: 12px; line-height: 16px; color: rgba(247,242,236,.6); padding-top: 10px; position: relative; }
+.pd-progress__steps li::before { content: ""; position: absolute; top: 0; left: 0; right: 0; height: 5px; border-radius: 3px; background: rgba(247,242,236,.18); transition: background-color .3s ease; }
+.pd-progress__steps li.is-done { color: var(--paper); }
+.pd-progress__steps li.is-done::before { background: var(--lak); }
+.pd-sms.is-ready [data-sms-link] { box-shadow: 0 0 0 4px rgba(242,181,189,.35); }
+.pd-sms__done { margin: 0; padding: var(--space-3) var(--space-4); border-radius: var(--radius-md); background: rgba(242,181,189,.16); color: var(--paper); font-size: 15px; line-height: 22px; }
+@media (prefers-reduced-motion: reduce) { .pd-progress__steps li::before { transition: none; } }
+.pd-loyal { border-radius: var(--radius-md); text-align: left; }
+@media (max-width: 600px) { .pd-loyal { font-size: 15px; } .pd-progress__top { flex-wrap: wrap; } }
