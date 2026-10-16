@@ -630,3 +630,10 @@ html { background-color: var(--paper); color-scheme: light; }
 .pd-desktop-only { display: none; }
 @media (hover: hover) and (pointer: fine) { .pd-desktop-only { display: revert; } button.pd-desktop-only { display: inline-flex; } }
 .pd-footer__tag { font-size: 12px; font-weight: 600; color: var(--lak); margin-left: 4px; white-space: nowrap; }
+
+/* O mne – jednotné písmo: nadpis serif, text a podpis v jednom bezpätkovom štýle */
+.pd-about__text .pd-lead { margin-top: 0; }
+.pd-about__sign { font-family: var(--font-sans); font-size: 18px; line-height: 27px; font-weight: 600; letter-spacing: 0; color: var(--lak-text); margin-top: var(--space-1); }
+/* Kontakt – číslo na SMS bez podčiarknutia, vo farbe */
+.pd-contact__big a[href^="sms:"] { color: var(--lak-text); text-decoration: none; }
+.pd-contact__big a[href^="sms:"]:hover { color: var(--lak-logo); }
