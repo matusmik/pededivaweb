@@ -25,12 +25,25 @@
   header.addEventListener('focusin', function () { header.classList.remove('is-hidden'); });
   update();
 
-  /* Mobilná lišta sa ukáže až keď hlavné tlačidlo v hero zmizne z obrazovky */
+  /* Mobilná lišta: skrytá, kým je vidieť hlavné tlačidlo v úvode alebo sekcia Kontakt / pätička */
   var bar = document.querySelector('.pd-bar'), cta = document.querySelector('.pd-hero .pd-btn--primary');
-  if (bar && cta && 'IntersectionObserver' in window) {
+  var zones = [cta, document.getElementById('kontakt'), document.querySelector('.pd-footer')].filter(Boolean);
+  if (bar && zones.length && 'IntersectionObserver' in window) {
+    var seen = new Map();
+    var apply = function () {
+      var hide = false; seen.forEach(function (v) { if (v) hide = true; });
+      bar.classList.toggle('pd-bar--hidden', hide); bar.inert = hide; bar.setAttribute('aria-hidden', hide ? 'true' : 'false');
+    };
     bar.classList.add('pd-bar--hidden');
-    new IntersectionObserver(function (e) { var hide = e[0].isIntersecting; bar.classList.toggle('pd-bar--hidden', hide); bar.inert = hide; bar.setAttribute('aria-hidden', hide ? 'true' : 'false'); }).observe(cta);
+    var bo = new IntersectionObserver(function (entries) { entries.forEach(function (e) { seen.set(e.target, e.isIntersecting); }); apply(); });
+    zones.forEach(function (z) { bo.observe(z); });
   }
+
+  /* Otázky: otvorená môže byť len jedna */
+  var faqs = document.querySelectorAll('.pd-faq details');
+  faqs.forEach(function (d) {
+    d.addEventListener('toggle', function () { if (d.open) faqs.forEach(function (o) { if (o !== d) o.open = false; }); });
+  });
 })();
 
 /* SMS do poradovníka – text podľa voľby návštevníka + ukazovateľ krokov */
