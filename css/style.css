@@ -669,3 +669,8 @@ html { background-color: var(--paper); color-scheme: light; }
 .pd-smsdesk__num strong { font-family: var(--font-serif); font-weight: 600; font-size: 26px; color: var(--lak); }
 .pd-smsdesk ul { margin: 0; padding-left: var(--space-6); list-style: disc; display: grid; gap: var(--space-1); font-size: 16px; line-height: 25px; color: var(--paper); }
 .pd-smsdesk li::marker { color: var(--lak); }
+.pd-smsdesk { border-color: rgba(247,242,236,.55); }
+@media (hover: hover) and (pointer: fine) {
+  .pd-contact__big a[href^="sms:"] { font-family: var(--font-sans); font-size: 18px; line-height: 26px; font-weight: 600; letter-spacing: 0; }
+  .pd-contact__big:has(a[href^="sms:"]) { font-family: var(--font-sans); font-size: 18px; line-height: 26px; }
+}
